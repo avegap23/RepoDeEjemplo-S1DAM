@@ -3,70 +3,68 @@
 ### Básicos
 `cd ss` -> cambiarse de lugar en el directorio
 
-`git init` -> reiniciarlo, crear un nuevo repositorio
+`git init` -> inicializar repositorio, o reiniciarlo si ya había uno
 
-`git` -> indica qué no se llevó al Staying Area
-
-`clear` -> limpiralo todo
+`clear` -> limpiar terminal
 
 `ls` -> ver los archivos de la carpeta donde estamos ahora
 
 ### Archivos
-`git status -s` -> preguntar por el estado en donde se encuentra el repositorio actual
+`git status` -> preguntar por el estado en donde se encuentra el repositorio actual
 
-`git log --oneline` -> lista los commit realizados, con las horas y el dia, y el mensaje
+`git log` -> lista los commit realizados, con el id, el mensaje y la fecha
 
-`git log` -> muestra los datos de cada commit realizado
+`git log --oneline` -> lista los commits sólo con el id y el mensaje
 
-`git add archivo` -> pone todos los archivos y carpetas en seguimiento
+`git add .` -> pone todos los archivos y carpetas en seguimiento
 
-`git reset --hard nombre` -> deja el archivo como estaba al principio
+`git add <archivo>` -> pone un archivo en seguimiento
 
-`git add .` -> añade todos los archivos y carpetas en seguimiento
+`git reset --hard <archivo>` -> descarta los cambios del archivo
 
 ### Commit
-`git commit -m ""` -> captura instantánea, crear nueva versión
+`git commit -m "<mensaje>"` -> hacer un commit con su mensaje
 
-`git commit -am "Cuarta versión"` -> git add + git commit -m
+`git commit -am "<mensaje>"` -> `git add` + `git commit -m "<mensaje>"`
 
-`git commit --amend` -> rectificar comentario editor, cambiar nombre versión
+`git commit --amend` -> rectificar mensaje del commit anterior. Si hay archivos en el Staging Area, también se rectificará con los archivos nuevos
 
 ### Repositorios
-`config --global core.editor "nano"` -> de bit a nano
+`config --global core.editor "nano"` -> configurar el editor a nano
 
 `git push -u origin master` -> subir la información de la rama master de repositorio local -> al remoto
 
-`git remote add origin ""` -> abreviatura de todo el truñaco
+`git remote add origin "<URL>"` -> configurar el repositorio remoto
 
-`git remote rm origin` -> para eliminar el vinculo que tengo con el usuario remoto
+`git remote rm origin` -> para eliminar el vinculo que tengo con el repositorio remoto
 
-`git remote -v` -> para vinculos con repositorios remotos (te da la url)
+`git remote -v` -> devuelve la url del repositorio remoto
 
 `git remote` -> te dice la conexion con la que estas conectado al repositorio actual
 
+`git clone <URL>` -> clonar un repositorio en la máquina local
+
 `git pull` -> traer los cambios del repositorio remoto al local
 
+`git push` -> subir cambios al repositorio remoto
+
 ### Etiquetas
-`git tag 20230515v1 -m "Versión 1 San Isidro"` -> crear etiqueta
+`git tag 20230515v1 -m "<nombre de etiqueta>"` -> crear etiqueta
 
-`git push --tags` -> sube las etiquetas al repositorio
-
-`git push` -> empujar repositorio al lugar deseado
-
-`git clone "enlace copiado"` -> clonar proyecto, sirve para proteger información por si se borra
+`git push --tags` -> subir las etiquetas al repositorio remoto
 
 ### Ramas
-`git branch` -> enseña la rama en la que estas
+`git branch` -> devuelve el nombre de la rama en la que estás
 
-`git branch nombre` -> crea la rama
+`git branch <nombre>` -> crea una rama nueva
 
-`git checkout` o `switch html/main/master` -> cambiar de rama
+`git checkout <rama>` o `switch html/main/master` -> cambiar de rama
 
-`git merge versión` -> fusionar los cambios hechos en la rama "html" a la rama actual
+`git merge <versión>` -> fusionar los cambios hechos en la rama `<versión>` a la rama actual
 
-`git branch -d versión` -> para eliminar la rama (tienen que estar fusionadas)
+`git branch -d <versión>` -> para eliminar la rama (tienen que estar fusionadas)
 
-`git branch -D versión` -> para eliminar la rama (no tienen que estar fusionadas)
+`git branch -D <versión>` -> para eliminar la rama (no tienen que estar fusionadas)
 
 `git branch --merged` -> para ver las ramas que se han fusionado
 
