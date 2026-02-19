@@ -49,7 +49,9 @@
 `git push` -> subir cambios al repositorio remoto
 
 ### Etiquetas
-`git tag 20230515v1 -m "<nombre de etiqueta>"` -> crear etiqueta
+`git tag 20230515v1` -> crear etiqueta
+
+`git tag 20230515v1 -m "<mensaje de etiqueta>"` -> crear etiqueta con mensaje
 
 `git push --tags` -> subir las etiquetas al repositorio remoto
 
