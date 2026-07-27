@@ -30,7 +30,7 @@
 `git commit --amend` -> rectificar mensaje del commit anterior. Si hay archivos en el Staging Area, también se rectificará con los archivos nuevos
 
 ### Repositorios
-`config --global core.editor "nano"` -> configurar el editor a nano
+`git config --global core.editor "nano"` -> configurar el editor a nano
 
 `git push -u origin master` -> subir la información de la rama master de repositorio local -> al remoto
 
